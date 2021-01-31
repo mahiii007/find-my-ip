@@ -12,16 +12,12 @@ export class MyIpDetailsComponent implements OnInit {
   myIpDetails;
   deviceInfo;
 
-  constructor(
-    public ipService: IpService,
-    private router: Router
-  ) {}
+  constructor(public ipService: IpService, private router: Router) {}
 
   async ngOnInit() {
     await this.viewMyIp();
     const ipDetails = await this.viewMyIpDetails(this.myIp);
     this.myIpDetails = Array.of(ipDetails);
-    
   }
 
   async viewMyIp() {
@@ -41,8 +37,8 @@ export class MyIpDetailsComponent implements OnInit {
       console.log(error);
     }
   }
-  
-  navigateToDeviceInfo(){
-    this.router.navigate(['myDevice']);
+
+  navigateToDeviceInfo() {
+    this.router.navigate(["myDevice"]);
   }
 }

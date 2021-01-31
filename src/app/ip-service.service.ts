@@ -15,7 +15,7 @@ export class IpService {
     return this.http.get(url, { ...Option, responseType: "text" }).toPromise();
   }
   async loadIpDetails(ipAddress){
-    const url = `http://api.ipstack.com/${ipAddress}?access_key=${Constants.API_KEYS.GEO_LOCATION}`;
+    const url = `https://ipapi.co/${ipAddress}/json/`;
     return this.http.get(url, { ...Option, responseType: "json" }).toPromise();
   }
 }
