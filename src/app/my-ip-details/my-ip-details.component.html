@@ -1,0 +1,53 @@
+<div class="container mt-5" align="center">
+    <div class="card p-3" style="width:500px">
+      <div class="card-header bg-primary text-white text-center">
+        <h5>{{myIp}}</h5>
+      </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <tbody *ngFor="let i of myIpDetails">
+                  <tr>
+                    <th scope="row">IP</th>
+                    <td>{{myIp}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >TYPE</th>
+                    <td>{{i.type}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CITY</th>
+                    <td>{{i.city}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">REGION</th>
+                    <td>{{i.region_name}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">COUNTRY</th>
+                    <td>{{i.country_name}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CONTINENT</th>
+                    <td>{{i.continent_name}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">LATITUDE</th>
+                    <td>{{i.latitude}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">LONGITUDE</th>
+                    <td>{{i.longitude}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PIN</th>
+                    <td>{{i.zip}}</td>
+                  </tr>
+                </tbody>
+                <div>
+                   <a class="btn btn-primary mt-3 text-center" (click)= navigateToDeviceInfo()>Show Device Info</a>
+                </div>
+               
+              </table>
+        </div>
+      </div>
+</div>
